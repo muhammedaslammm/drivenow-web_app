@@ -1,0 +1,167 @@
+:root {
+  --text-color: rgb(33, 33, 33);
+  --white-text-color: rgb(243, 243, 243);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgb(226, 226, 226);
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.header {
+  border-bottom: 1px solid rgb(172, 172, 172);
+  nav {
+    padding: 1.2rem 0;
+    width: 120rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    .logo a {
+      text-decoration: none;
+      font-size: 2.7rem;
+      color: rgb(45, 45, 45);
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      li a {
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: var(--text-color);
+      }
+    }
+  }
+}
+
+.aboutus__container {
+  width: 120rem;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  h1 {
+    font-weight: 500;
+    font-size: 1.65em;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 1.4rem;
+    text-align: justify;
+  }
+}
+.banner {
+  width: 120rem;
+  margin: 2rem auto;
+  img {
+    width: 100%;
+  }
+}
+
+.segment__head {
+  width: 120rem;
+  margin: 8rem auto 1rem;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.car__segments {
+  width: 120rem;
+  margin: 1rem auto 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  gap: 1rem;
+  a {
+    background-color: rgb(234, 234, 234);
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: rgb(41, 41, 41);
+    padding: 1rem;
+    cursor: pointer;
+    .segment {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 3rem;
+      .segment__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.5rem;
+      }
+      .segment__text {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+/* selected segment */
+.selected__segment {
+  width: 120rem;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  .selected__segment__head {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  .selected__segment__cars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 28rem);
+    gap: 1.2rem;
+  }
+}
+.car__card {
+  border: 1px solid rgb(172, 172, 172);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+
+  .card__top {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    .car__name {
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+    .card__top-bottom {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.25rem;
+    }
+  }
+  .card__bottom {
+    align-self: flex-end;
+    .car__price {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+}
+
+/* error container */
+.error__container {
+  margin: 2rem;
+  span {
+    font-size: 1.8rem;
+  }
+}
