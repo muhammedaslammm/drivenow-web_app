@@ -1,6 +1,10 @@
+@use "mixins";
+
 :root {
-  --text-color: rgb(33, 33, 33);
+  --text-color: rgb(206, 206, 206);
   --white-text-color: rgb(243, 243, 243);
+  --background-color: rgb(25, 25, 25);
+  --background-color-two: rgb(32, 32, 32);
 }
 
 * {
@@ -15,24 +19,25 @@ html {
 }
 
 body {
-  background-color: rgb(226, 226, 226);
+  background-color: var(--background-color);
   &::-webkit-scrollbar {
     display: none;
   }
 }
 .header {
-  background-color: rgb(234, 234, 234);
-  border-bottom: 1px solid rgb(215, 215, 215);
+  background-color: var(--background-color);
+  // border-bottom: 1px solid rgb(82, 82, 82);
   nav {
     padding: 1.2rem 0;
-    width: 120rem;
+    max-width: 120rem;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     .logo a {
       text-decoration: none;
       font-size: 2.7rem;
-      color: rgb(45, 45, 45);
+      color: var(--text-color);
     }
     ul {
       list-style: none;
@@ -40,6 +45,7 @@ body {
       align-items: center;
       gap: 4rem;
       li a {
+        color: var(--text-color);
         font-size: 1.6rem;
         text-decoration: none;
         color: var(--text-color);
@@ -49,7 +55,7 @@ body {
 }
 
 .aboutus__container {
-  width: 120rem;
+  max-width: 120rem;
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
@@ -65,33 +71,43 @@ body {
   }
 }
 .banner {
-  width: 120rem;
-  margin: 2rem auto;
+  max-width: 120rem;
+  width: 90%;
+  margin: 0rem auto 4rem;
   img {
     width: 100%;
   }
 }
+/* shimmer section */
+.shimmer__section {
+  @include mixins.shimmer__section;
+  .shimmer__card {
+    @include mixins.shimmer__card;
+  }
+}
 
 .segment__head {
-  width: 120rem;
-  margin: 8rem auto 1rem;
+  max-width: 120rem;
+  width: 90%;
+  margin: 2rem auto 1rem;
   font-size: 1.75rem;
+  color: var(--text-color);
   font-weight: 500;
 }
 .car__segments {
-  width: 120rem;
+  max-width: 120rem;
+  width: 90%;
   margin: 1rem auto 10rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
-  gap: 1rem;
+  gap: 1.2rem;
   a {
-    background-color: rgb(234, 234, 234);
-    /* border: 1px solid rgb(218, 218, 218); */
-    box-shadow: 0 0 0.2rem rgb(168, 168, 168);
+    background-color: var(--background-color-two);
+    border: 1px solid rgb(43, 43, 43);
     border-radius: 0.5rem;
     text-decoration: none;
-    color: rgb(41, 41, 41);
-    padding: 1rem;
+    color: var(--text-color);
+    padding: 1.2rem 1.5rem;
     cursor: pointer;
     .segment {
       display: flex;
@@ -114,13 +130,14 @@ body {
 
 /* selected segment */
 .selected__segment {
-  width: 120rem;
+  max-width: 120rem;
+  width: 90%;
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
   .selected__segment__head {
-    font-size: 1.75rem;
+    font-size: 1.78rem;
     font-weight: 500;
   }
   .selected__segment__cars {
@@ -130,6 +147,12 @@ body {
     a {
       text-decoration: none;
       color: rgb(19, 52, 67);
+    }
+  }
+  .shimmer__section {
+    @include mixins.shimmer__section;
+    .shimmer__card {
+      @include mixins.shimmer__card;
     }
   }
 }

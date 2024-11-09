@@ -2,10 +2,9 @@
   "name": "car_rent",
   "version": "1.0.0",
   "description": "sample car rent react app",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx parcel application.html"
+    "start": "npx parcel application.html",
+    "css-build": "npx parcel scss/app.scss --dist-dir css"
   },
   "author": "Muhammed Aslam",
   "license": "ISC",
@@ -16,6 +15,7 @@
   },
   "devDependencies": {
     "parcel": "^2.12.0",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "sass": "^1.80.6"
   }
 }

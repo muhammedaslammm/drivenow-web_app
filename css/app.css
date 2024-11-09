@@ -1,0 +1,293 @@
+:root {
+  --text-color: #cecece;
+  --white-text-color: #f3f3f3;
+  --background-color: #191919;
+  --background-color-two: #202020;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Poppins, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  background-color: var(--background-color);
+}
+
+.header nav {
+  justify-content: space-between;
+  width: 90%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1.2rem 0;
+  display: flex;
+}
+
+.header nav .logo a {
+  color: var(--text-color);
+  font-size: 2.7rem;
+  text-decoration: none;
+}
+
+.header nav ul {
+  align-items: center;
+  gap: 4rem;
+  list-style: none;
+  display: flex;
+}
+
+.header nav ul li a {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+.aboutus__container {
+  flex-direction: column;
+  gap: .7rem;
+  max-width: 120rem;
+  margin: 2rem auto;
+  display: flex;
+}
+
+.aboutus__container h1 {
+  text-transform: uppercase;
+  font-size: 1.65em;
+  font-weight: 500;
+}
+
+.aboutus__container p {
+  text-align: justify;
+  font-size: 1.4rem;
+}
+
+.banner {
+  width: 90%;
+  max-width: 120rem;
+  margin: 0 auto 4rem;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.shimmer__section {
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 120rem;
+  margin: 2rem auto;
+  display: flex;
+}
+
+.shimmer__section .shimmer__head {
+  background-color: #cac9c9;
+  border-radius: .2rem;
+  width: 10rem;
+  padding: 1rem;
+}
+
+.shimmer__section .shimmer__container {
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  gap: 1rem;
+  display: grid;
+}
+
+.shimmer__section .shimmer__card {
+  background-color: #d0d0d0;
+  border: 1px solid #dadada;
+  border-radius: .5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 1.2rem;
+  display: flex;
+}
+
+.shimmer__section .shimmer__card .card__top {
+  background-color: #b1b1b1;
+  width: 30%;
+  padding: 1rem;
+}
+
+.shimmer__section .shimmer__card .card__bottom {
+  background-color: #b1b1b1;
+  width: 70%;
+  padding: 1rem;
+}
+
+.segment__head {
+  width: 90%;
+  max-width: 120rem;
+  color: var(--text-color);
+  margin: 2rem auto 1rem;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.car__segments {
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  gap: 1.2rem;
+  width: 90%;
+  max-width: 120rem;
+  margin: 1rem auto 10rem;
+  display: grid;
+}
+
+.car__segments a {
+  background-color: var(--background-color-two);
+  color: var(--text-color);
+  cursor: pointer;
+  border: 1px solid #2b2b2b;
+  border-radius: .5rem;
+  padding: 1.2rem 1.5rem;
+  text-decoration: none;
+}
+
+.car__segments a .segment {
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  display: flex;
+}
+
+.car__segments a .segment .segment__top {
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  display: flex;
+}
+
+.car__segments a .segment .segment__text {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.selected__segment {
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 90%;
+  max-width: 120rem;
+  margin: 2rem auto;
+  display: flex;
+}
+
+.selected__segment .selected__segment__head {
+  font-size: 1.78rem;
+  font-weight: 500;
+}
+
+.selected__segment .selected__segment__cars {
+  grid-template-columns: repeat(auto-fit, 28rem);
+  gap: 1.2rem;
+  display: grid;
+}
+
+.selected__segment .selected__segment__cars a {
+  color: #133443;
+  text-decoration: none;
+}
+
+.selected__segment .shimmer__section {
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 120rem;
+  margin: 2rem auto;
+  display: flex;
+}
+
+.selected__segment .shimmer__section .shimmer__head {
+  background-color: #cac9c9;
+  border-radius: .2rem;
+  width: 10rem;
+  padding: 1rem;
+}
+
+.selected__segment .shimmer__section .shimmer__container {
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  gap: 1rem;
+  display: grid;
+}
+
+.selected__segment .shimmer__section .shimmer__card {
+  background-color: #d0d0d0;
+  border: 1px solid #dadada;
+  border-radius: .5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 1.2rem;
+  display: flex;
+}
+
+.selected__segment .shimmer__section .shimmer__card .card__top {
+  background-color: #b1b1b1;
+  width: 30%;
+  padding: 1rem;
+}
+
+.selected__segment .shimmer__section .shimmer__card .card__bottom {
+  background-color: #b1b1b1;
+  width: 70%;
+  padding: 1rem;
+}
+
+.car__card {
+  background-color: #eaeaea;
+  border: 1px solid #d6d6d6;
+  border-radius: .5rem;
+  flex-direction: column;
+  gap: 6rem;
+  padding: .5rem .8rem;
+  display: flex;
+}
+
+.car__card .card__top {
+  flex-direction: column;
+  gap: .1rem;
+  display: flex;
+}
+
+.car__card .card__top .car__name {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.car__card .card__top .card__top-bottom {
+  justify-content: space-between;
+  font-size: 1.25rem;
+  display: flex;
+}
+
+.car__card .card__bottom {
+  align-self: flex-end;
+}
+
+.car__card .card__bottom .car__price {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.error__container {
+  margin: 2rem;
+}
+
+.error__container span {
+  font-size: 1.8rem;
+}
+/*# sourceMappingURL=app.css.map */

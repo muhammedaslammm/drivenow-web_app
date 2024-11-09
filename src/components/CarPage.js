@@ -1,8 +1,6 @@
 import { useParams } from "react-router-dom";
 
 let CarPage = () => {
-  let params = useParams();
-  console.log(params);
   return (
     <div className="details__conatainer">
       <div className="details__top">

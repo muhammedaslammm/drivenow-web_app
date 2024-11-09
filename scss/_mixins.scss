@@ -1,0 +1,40 @@
+@mixin shimmer__section {
+  max-width: 120rem;
+  width: 100%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  .shimmer__head {
+    background-color: rgb(202, 201, 201);
+    padding: 1rem;
+    width: 10rem;
+    border-radius: 0.2rem;
+  }
+  .shimmer__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: 1rem;
+  }
+}
+
+@mixin shimmer__card {
+  background-color: rgb(208, 208, 208);
+  border: 1px solid rgb(218, 218, 218);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 1.2rem;
+  .card__top {
+    padding: 1rem;
+    background-color: rgb(177, 177, 177);
+    width: 30%;
+  }
+  .card__bottom {
+    padding: 1rem;
+    background-color: rgb(177, 177, 177);
+    width: 70%;
+  }
+}

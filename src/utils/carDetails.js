@@ -85,7 +85,7 @@ let getCars = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(usedCars);
-    }, 200);
+    }, 500);
   });
 };
 

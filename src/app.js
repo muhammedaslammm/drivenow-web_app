@@ -27,10 +27,10 @@ let routingConfig = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "aboutus", element: <AboutUs /> },
       {
-        path: "segment/:segment",
+        path: "segment/:segment/",
         element: <SelectedSegment />,
       },
-      { path: "*", element: <Error /> },
+      { path: "segment/:segment/:carid", element: <CarPage /> },
     ],
   },
 ]);
