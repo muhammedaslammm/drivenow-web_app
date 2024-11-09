@@ -21,7 +21,8 @@ body {
   }
 }
 .header {
-  border-bottom: 1px solid rgb(172, 172, 172);
+  background-color: rgb(234, 234, 234);
+  border-bottom: 1px solid rgb(215, 215, 215);
   nav {
     padding: 1.2rem 0;
     width: 120rem;
@@ -85,7 +86,8 @@ body {
   gap: 1rem;
   a {
     background-color: rgb(234, 234, 234);
-    border: 1px solid rgb(199, 199, 199);
+    /* border: 1px solid rgb(218, 218, 218); */
+    box-shadow: 0 0 0.2rem rgb(168, 168, 168);
     border-radius: 0.5rem;
     text-decoration: none;
     color: rgb(41, 41, 41);
@@ -118,17 +120,22 @@ body {
   flex-direction: column;
   gap: 1.2rem;
   .selected__segment__head {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     font-weight: 500;
   }
   .selected__segment__cars {
     display: grid;
     grid-template-columns: repeat(auto-fit, 28rem);
     gap: 1.2rem;
+    a {
+      text-decoration: none;
+      color: rgb(19, 52, 67);
+    }
   }
 }
 .car__card {
-  border: 1px solid rgb(172, 172, 172);
+  background-color: rgb(234, 234, 234);
+  border: 1px solid rgb(214, 214, 214);
   border-radius: 0.5rem;
   padding: 0.5rem 0.8rem;
   display: flex;

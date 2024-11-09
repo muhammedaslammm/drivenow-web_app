@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import SelectedSegment from "./components/SelectedSegment";
+import CarPage from "./components/CarPage";
 import Error from "./components/Error";
 import AboutUs from "./components/AboutUs";
 
@@ -24,8 +25,12 @@ let routingConfig = createBrowserRouter([
     errorElement: <Error />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/aboutus", element: <AboutUs /> },
-      { path: "/segment/:segment", element: <SelectedSegment /> },
+      { path: "aboutus", element: <AboutUs /> },
+      {
+        path: "segment/:segment",
+        element: <SelectedSegment />,
+      },
+      { path: "*", element: <Error /> },
     ],
   },
 ]);
